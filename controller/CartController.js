@@ -27,7 +27,18 @@ const addToCart = async (req, res) => {
         res.status(500).json({ error: 'Error adding product' });
     }
 };
+const getProduct = async (req, res) => {
+    try {
+        const product = await Cart.find();
+        console.log('Products fetched successfully');
+        res.status(200).json(product);
+    } catch (error) {
+        console.error('Error fetching products:', error);
+        res.status(500).json({ error: 'Error fetching products' });
+    }
+}
 
 module.exports = {
-    addToCart
+    addToCart,
+    getProduct
 };
