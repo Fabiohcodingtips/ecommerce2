@@ -1,6 +1,6 @@
 // controllers/productController.js
 
-const Cart = require('../model/Cart');
+const Cart = require('../models/CartModel');
 
 // Function to add a product
 const addtoCart = async(req,res)=>{
@@ -42,6 +42,6 @@ const getCart = async (req, res) => {
 }
 
 module.exports = {
-    addToCart,
+    addtoCart,
     getCart
 };

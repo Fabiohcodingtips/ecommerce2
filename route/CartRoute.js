@@ -1,5 +1,5 @@
 const express = require('express');
-const { addToCart, getCart } = require('../controller/CartController');
+const { addtoCart, getCart } = require('../controller/CartController');
 
 
 const router = express.Router();
@@ -9,7 +9,7 @@ router.use(express.json());
 router.use(express.urlencoded({extended:false}))
 
 //create user router
-router.post('/addtocart',addToCart);
+router.post('/addtocart',addtoCart);
 router.get('/getcart',getCart);
 
 // //get  user router
