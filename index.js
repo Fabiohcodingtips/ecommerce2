@@ -7,6 +7,7 @@ const cors = require('cors');
 // define routes
 const userRoutes = require('./route/UserRoute');
 const productRoutes = require('./route/ProductRoute');
+const cartRoutes = require ('./route/CartRoute')
 
 // connect to db
 if (process.env.NODE_ENV !== 'production'){
@@ -39,3 +40,4 @@ mongoose.connect(dbconnection, {useNewUrlParser:true, useUnifiedTopology:true})
 // create api routes
 app.use('/api/user', userRoutes);
 app.use('/api/product', productRoutes);
+app.use('/api/cart', cartRoutes);
